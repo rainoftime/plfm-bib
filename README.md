@@ -1,6 +1,11 @@
 # plfm-bib
-Reference about PL and FM
+BibTeX bibliography files about PL and FM.
 
-- SAT and SMT solving
-- Equivalence checking/proof
-- Pointer analysis
+- SAT and SMT solving: `sat-smt.bib`
+- Equivalence check/proof: `equivalenche check.bib` (including invariant inference)
+- Pointer analysis: `alias.bib`
+
+Related repos:
+
+- https://github.com/mernst/plume-bib
+- https://github.com/gbalats/pointer-analysis-bib
