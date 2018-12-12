@@ -1,0 +1,1164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%            SMT Solving 
+%%
+%%      - SMT solvers
+%%      - NRA, NIA, QF_NRA, QF_NIA,
+%%      - QF_BV solving
+%%      - SAT solving
+%%      - Symbolic execution
+%%      - Machine learning for SAT/SMT/..
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  SMT Solvers
+%%
+%%%%%%%%%%%%%%%%%%%%%%
+@article{barrett2009satisfiability,
+	title={Satisfiability Modulo Theories.},
+	author={Barrett, Clark W and Sebastiani, Roberto and Seshia, Sanjit A and Tinelli, Cesare},
+	journal={Handbook of satisfiability},
+	volume={185},
+	pages={825--885},
+	year={2009}
+}
+
+
+@article{plaisted1981theorem,
+	title={Theorem proving with abstraction},
+	author={Plaisted, David A},
+	journal={Artificial intelligence},
+	volume={16},
+	number={1},
+	pages={47--108},
+	year={1981},
+	publisher={Elsevier}
+}
+
+@misc{SMT-COMP2017,
+	title = {SMT-COMP2017},
+	howpublished = {\url{
+	http://smtcomp.sourceforge.net/2017/}},
+}
+
+@article{detlefs2005simplify,
+	title={Simplify: a theorem prover for program checking},
+	author={Detlefs, David and Nelson, Greg and Saxe, James B},
+	journal={Journal of the ACM (JACM)},
+	volume={52},
+	number={3},
+	pages={365--473},
+	year={2005},
+	publisher={ACM}
+}
+
+%% STP
+@inproceedings{ganesh2007decision,
+	title={A decision procedure for bit-vectors and arrays},
+	author={Ganesh, Vijay and Dill, David L},
+	booktitle={CAV},
+	volume={4590},
+	pages={519--531},
+	year={2007},
+	organization={Springer}
+}
+
+%% Boolector
+@article{niemetz2015boolector,
+	title={Boolector 2.0},
+	author={Niemetz, Aina and Preiner, Mathias and Biere, Armin},
+	journal={Journal on Satisfiability, Boolean Modeling and Computation},
+	volume={9},
+	pages={53--58},
+	year={2015}
+}
+
+
+%% CVC4
+@inproceedings{barrett2011cvc4,
+	title={Cvc4},
+	author={Barrett, Clark and Conway, Christopher and Deters, Morgan and Hadarean, Liana and Jovanovi{\'c}, Dejan and King, Tim and Reynolds, Andrew and Tinelli, Cesare},
+	booktitle={Computer aided verification},
+	pages={171--177},
+	year={2011},
+	organization={Springer}
+}
+
+%% MathSAT
+@inproceedings{cimatti2013mathsat5,
+	title={The MathSAT5 SMT Solver.},
+	author={Cimatti, Alessandro and Griggio, Alberto and Schaafsma, Bastiaan Joost and Sebastiani, Roberto},
+	booktitle={TACAS},
+	volume={7795},
+	pages={93--107},
+	year={2013},
+	organization={Springer}
+}
+
+
+%% YICES
+@inproceedings{dutertre2014yicesa2,
+	title={Yices{\"a}2. 2},
+	author={Dutertre, Bruno},
+	booktitle={Proceedings of the 16th International Conference on Computer Aided Verification-Volume 8559},
+	pages={737--744},
+	year={2014},
+	organization={Springer-Verlag New York, Inc.}
+}
+
+
+%% Z3
+@article{de2008z3,
+	title={Z3: An efficient SMT solver},
+	author={De Moura, Leonardo and Bj{\o}rner, Nikolaj},
+	journal={Tools and Algorithms for the Construction and Analysis of Systems},
+	pages={337--340},
+	year={2008},
+	publisher={Springer}
+}
+
+
+%%%%%%%%%%%%%%%%%%
+%%
+%%  NIA, UFNIA and AUFNIA (Quantified and Quantifier-free)
+%%  and NRA, UFNRA
+%%%%%%%%%%%%%%%%%%%%%
+
+%%% Applications of NIA, UFNIA and AUFNIA and NRA, UFNRA, AUFNRA
+@inproceedings{AProVE,
+	title={Proving termination of programs automatically with AProVE},
+	author={Giesl, J{\"u}rgen and Brockschmidt, Marc and Emmes, Fabian and Frohn, Florian and Fuhs, Carsten and Otto, Carsten and Pl{\"u}cker, Martin and Schneider-Kamp, Peter and Str{\"o}der, Thomas and Swiderski, Stephanie and others},
+	booktitle={International Joint Conference on Automated Reasoning},
+	pages={184--191},
+	year={2014},
+	organization={Springer}
+}
+
+@article{lin2016formalization,
+	title={A formalization of programs in first-order logic with a discrete linear order},
+	author={Lin, Fangzhen},
+	journal={Artificial Intelligence},
+	volume={235},
+	pages={1--25},
+	year={2016},
+	publisher={Elsevier}
+}
+
+@inproceedings{larraz2013proving,
+	title={Proving termination of imperative programs using Max-SMT},
+	author={Larraz, Daniel and Oliveras, Albert and Rodr{\'\i}guez-Carbonell, Enric and Rubio, Albert},
+	booktitle={Formal Methods in Computer-Aided Design (FMCAD), 2013},
+	pages={218--225},
+	year={2013},
+	organization={IEEE}
+}
+
+@article{srikanth2017complexity,
+	title={Complexity verification using guided theorem enumeration},
+	author={Srikanth, Akhilesh and Sahin, Burak and Harris, William R},
+	journal={ACM SIGPLAN Notices},
+	volume={52},
+	number={1},
+	pages={639--652},
+	year={2017},
+	publisher={ACM}
+}
+
+@inproceedings{gao2013dreal,
+	title={dReal: An SMT solver for nonlinear theories over the reals},
+	author={Gao, Sicun and Kong, Soonho and Clarke, Edmund M},
+	booktitle={International Conference on Automated Deduction},
+	pages={208--214},
+	year={2013},
+	organization={Springer}
+}
+
+
+
+%%MCSAT
+@inproceedings{MCSAT,
+	title={The design and implementation of the model constructing satisfiability calculus},
+	author={Jovanovic, Dejan and Barrett, Clark and De Moura, Leonardo},
+	booktitle={Formal Methods in Computer-Aided Design (FMCAD), 2013},
+	pages={173--180},
+	year={2013},
+	organization={IEEE}
+}
+
+%%MCSAT for NIA
+@inproceedings{MCSAT4NIA,
+	title={Solving nonlinear integer arithmetic with MCSAT},
+	author={Jovanovi{\'c}, Dejan},
+	booktitle={International Conference on Verification, Model Checking, and Abstract Interpretation},
+	pages={330--346},
+	year={2017},
+	organization={Springer}
+}
+
+%% CAD
+@incollection{collins1998quantifier,
+	title={Quantifier elimination for real closed fields by cylindrical algebraic decomposition},
+	author={Collins, George E},
+	booktitle={Quantifier elimination and cylindrical algebraic decomposition},
+	pages={85--121},
+	year={1998},
+	publisher={Springer}
+}
+
+% NLSat
+@inproceedings{jovanovic2012solving,
+	title={Solving non-linear arithmetic},
+	author={Jovanovi{\'c}, Dejan and De Moura, Leonardo},
+	booktitle={International Joint Conference on Automated Reasoning},
+	pages={339--354},
+	year={2012},
+	organization={Springer}
+}
+
+
+%% to SAT
+@inproceedings{fuhs2007sat,
+	title={SAT solving for termination analysis with polynomial interpretations},
+	author={Fuhs, Carsten and Giesl, J{\"u}rgen and Middeldorp, Aart and Schneider-Kamp, Peter and Thiemann, Ren{\'e} and Zankl, Harald},
+	booktitle={International Conference on Theory and Applications of Satisfiability Testing},
+	pages={340--354},
+	year={2007},
+	organization={Springer}
+}
+
+@inproceedings{borralleras2009solving,
+	title={Solving non-linear polynomial arithmetic via SAT modulo linear arithmetic},
+	author={Borralleras, Cristina and Lucas, Salvador and Navarro-Marset, Rafael and Rodr{\'\i}guez-Carbonell, Enric and Rubio, Albert},
+	booktitle={International Conference on Automated Deduction},
+	pages={294--305},
+	year={2009},
+	organization={Springer}
+}
+
+
+%% to LIA?
+@article{borralleras2012sat,
+	title={SAT modulo linear arithmetic for solving polynomial constraints},
+	author={Borralleras, Cristina and Lucas, Salvador and Oliveras, Albert and Rodr{\'\i}guez-Carbonell, Enric and Rubio, Albert},
+	journal={Journal of Automated Reasoning},
+	volume={48},
+	number={1},
+	pages={107--131},
+	year={2012},
+	publisher={Springer}
+}
+
+
+@inproceedings{larraz2014minimal,
+	title={Minimal-model-guided approaches to solving polynomial constraints and extensions},
+	author={Larraz, Daniel and Oliveras, Albert and Rodr{\'\i}guez-Carbonell, Enric and Rubio, Albert},
+	booktitle={International Conference on Theory and Applications of Satisfiability Testing},
+	pages={333--350},
+	year={2014},
+	organization={Springer}
+}
+
+%%  MBQI
+@inproceedings{ge2009complete,
+	title={Complete instantiation for quantified formulas in satisfiabiliby modulo theories},
+	author={Ge, Yeting and De Moura, Leonardo},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={306--320},
+	year={2009},
+	organization={Springer}
+}
+
+
+%% Quantifier instantiation
+@inproceedings{reynolds2016conflicts,
+	title={Conflicts, Models and Heuristics for Quantifier Instantiation in SMT.},
+	author={Reynolds, Andrew},
+	booktitle={Vampire@ IJCAR},
+	pages={1--15},
+	year={2016}
+}
+
+%% E-matching
+@article{detlefs2005simplify,
+	title={Simplify: a theorem prover for program checking},
+	author={Detlefs, David and Nelson, Greg and Saxe, James B},
+	journal={Journal of the ACM (JACM)},
+	volume={52},
+	number={3},
+	pages={365--473},
+	year={2005},
+	publisher={ACM}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Bit-vector arithmetic
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ackermanizaiton
+@article{ackermann1954solvable,
+	title={Solvable cases of the decision problem},
+	author={Ackermann, Wilhelm and Ackermann, Friedrich Wilhelm},
+	year={1954},
+	publisher={North-Holland Publishing Company Amsterdam}
+}
+
+@book{brummayer2010efficient,
+	title={Efficient SMT solving for bit-vectors and the extensional theory of arrays},
+	author={Brummayer, Robert},
+	year={2010},
+	publisher={Trauner}
+}
+
+@phdthesis{franzen2010efficient,
+	title={Efficient solving of the satisfiability modulo bit-vectors problem and some extensions to SMT},
+	author={Franz{\'e}n, Anders},
+	year={2010},
+	school={University of Trento}
+}
+
+
+%%% Solve BV with mcSAT (Model-Constructing Satisfiability Calculus)
+
+@inproceedings{de2013model,
+	title={A Model-Constructing Satisfiability Calculus.},
+	author={de Moura, Leonardo Mendon{\c{c}}a and Jovanovic, Dejan},
+	booktitle={VMCAI},
+	volume={7737},
+	pages={1--12},
+	year={2013}
+}
+
+@inproceedings{zeljic2016deciding,
+	title={Deciding bit-vector formulas with mcSAT},
+	author={Zelji{\'c}, Aleksandar and Wintersteiger, Christoph M and R{\"u}mmer, Philipp},
+	booktitle={International Conference on Theory and Applications of Satisfiability Testing},
+	pages={249--266},
+	year={2016},
+	organization={Springer}
+}
+
+%%%
+@inproceedings{cyrluk1997efficient,
+	title={An efficient decision procedure for the theory of fixed-sized bit-vectors},
+	author={Cyrluk, David and M{\"o}ller, Oliver and Rue{\ss}, Harald},
+	booktitle={Computer Aided Verification},
+	pages={60--71},
+	year={1997},
+	organization={Springer}
+}
+
+@inproceedings{bruttomesso2009scalable,
+	title={A scalable decision procedure for fixed-width bit-vectors},
+	author={Bruttomesso, Roberto and Sharygina, Natasha},
+	booktitle={Proceedings of the 2009 International Conference on Computer-Aided Design},
+	pages={13--20},
+	year={2009},
+	organization={ACM}
+}
+
+@inproceedings{johannsen2001reducing,
+	title={Reducing bitvector satisfiability problems to scale down design sizes for RTL property checking},
+	author={Johannsen, Peer},
+	booktitle={High-Level Design Validation and Test Workshop, 2001. Proceedings. Sixth IEEE International},
+	pages={123--128},
+	year={2001},
+	organization={IEEE}
+}
+
+
+%%% CVC4 thesis
+% AIG simplification bad for simple cases
+@phdthesis{hadarean2015efficient,
+  title={An Efficient and Trustworthy Theory Solver for Bit-vectors in Satisfiability Modulo Theories},
+  author={Hadarean, Liana},
+  year={2015},
+  school={New York University}
+}
+
+@inproceedings{barrett1998decision,
+  title={A decision procedure for bit-vector arithmetic},
+  author={Barrett, Clark W and Dill, David L and Levitt, Jeremy R},
+  booktitle={Proceedings of the 35th annual Design Automation Conference},
+  pages={522--527},
+  year={1998},
+  organization={ACM}
+}
+
+%% Bruttomesso
+@inproceedings{bruttomesso2007lazy,
+  title={A lazy and layered SMT (BV) solver for hard industrial verification problems},
+  author={Bruttomesso, Roberto and Cimatti, Alessandro and Franz{\'e}n, Anders and Griggio, Alberto and Hanna, Ziyad and Nadel, Alexander and Palti, Amit and Sebastiani, Roberto},
+  booktitle={CAV},
+  volume={4590},
+  pages={547--560},
+  year={2007},
+  organization={Springer}
+}
+
+@phdthesis{franzen2010efficient,
+  title={Efficient solving of the satisfiability modulo bit-vectors problem and some extensions to SMT},
+  author={Franz{\'e}n, Anders},
+  year={2010},
+  school={University of Trento}
+}
+
+%%% BV to EPR
+@inproceedings{kovasznai2013bv2epr,
+  title={bv2epr: A tool for polynomially translating quantifier-free bit-vector formulas into epr},
+  author={Kov{\'a}sznai, Gergely and Fr{\"o}hlich, Andreas and Biere, Armin},
+  booktitle={International Conference on Automated Deduction},
+  pages={443--449},
+  year={2013},
+  organization={Springer}
+}
+
+%%% Solve BV with local search
+@inproceedings{frohlich2015stochastic,
+  title={Stochastic Local Search for Satisfiability Modulo Theories.},
+  author={Fr{\"o}hlich, Andreas and Biere, Armin and Wintersteiger, Christoph M and Hamadi, Youssef},
+  booktitle={AAAI},
+  pages={1136--1143},
+  year={2015}
+}
+
+@article{niemetz2015improving,
+  title={Improving local search for bit-vector logics in SMT with path propagation},
+  author={Niemetz, Aina and Preiner, Mathias and Biere, Armin and Fr{\"o}hlich, Andreas},
+  journal={Proceedings of DIFTS},
+  pages={1--10},
+  year={2015}
+}
+
+%% local search CAV16
+@inproceedings{niemetz2016precise,
+  title={Precise and Complete Propagation Based Local Search for Satisfiability Modulo Theories.},
+  author={Niemetz, Aina and Preiner, Mathias and Biere, Armin},
+  booktitle={CAV (1)},
+  pages={199--217},
+  year={2016}
+}
+
+% Quantified BV
+@article{wintersteiger2013efficiently,
+	title={Efficiently solving quantified bit-vector formulas},
+	author={Wintersteiger, Christoph M and Hamadi, Youssef and De Moura, Leonardo},
+	journal={Formal Methods in System Design},
+	volume={42},
+	number={1},
+	pages={3--23},
+	year={2013},
+	publisher={Springer}
+}
+
+@inproceedings{stump2001decisionarray,
+	title={A decision procedure for an extensional theory of arrays},
+	author={Stump, Aaron and Barrett, Clark W and Dill, David L and Levitt, Jeremy},
+	booktitle={Logic in Computer Science, 2001. Proceedings. 16th Annual IEEE Symposium on},
+	pages={29--37},
+	year={2001},
+	organization={IEEE}
+}
+
+@inproceedings{cyrluk1997efficient,
+  title={An efficient decision procedure for the theory of fixed-sized bit-vectors},
+  author={Cyrluk, David and M{\"o}ller, Oliver and Rue{\ss}, Harald},
+  booktitle={Computer Aided Verification},
+  pages={60--71},
+  year={1997},
+  organization={Springer}
+}
+
+@inproceedings{barrett1998decision,
+  title={A decision procedure for bit-vector arithmetic},
+  author={Barrett, Clark W and Dill, David L and Levitt, Jeremy R},
+  booktitle={Proceedings of the 35th annual Design Automation Conference},
+  pages={522--527},
+  year={1998},
+  organization={ACM}
+}
+
+@article{babic2005modular,
+  title={Modular arithmetic decision procedure},
+  author={Babic, Domagoj and Musuvathi, Madanlal},
+  journal={Microsoft Research Redmond, Tech. Rep. TR-2005-114},
+  year={2005}
+}
+
+@inproceedings{brinkmann2002rtl,
+  title={RTL-datapath verification using integer linear programming},
+  author={Brinkmann, Raik and Drechsler, Rolf},
+  booktitle={Design Automation Conference, 2002. Proceedings of ASP-DAC 2002. 7th Asia and South Pacific and the 15th International Conference on VLSI Design. Proceedings.},
+  pages={741--746},
+  year={2002},
+  organization={IEEE}
+}
+
+@inproceedings{huang2000assertion,
+  title={Assertion checking by combined word-level ATPG and modular arithmetic constraint-solving techniques},
+  author={Huang, Chung-Yang and Cheng, Kwang-Ting},
+  booktitle={Proceedings of the 37th Annual Design Automation Conference},
+  pages={118--123},
+  year={2000},
+  organization={ACM}
+}
+
+@inproceedings{hadarean2014tale,
+  title={A tale of two solvers: Eager and lazy approaches to bit-vectors},
+  author={Hadarean, Liana and Bansal, Kshitij and Jovanovi{\'c}, Dejan and Barrett, Clark and Tinelli, Cesare},
+  booktitle={International Conference on Computer Aided Verification},
+  pages={680--695},
+  year={2014},
+  organization={Springer}
+}
+
+@inproceedings{bruttomesso2007lazy,
+	title={A lazy and layered SMT (BV) solver for hard industrial verification problems},
+	author={Bruttomesso, Roberto and Cimatti, Alessandro and Franz{\'e}n, Anders and Griggio, Alberto and Hanna, Ziyad and Nadel, Alexander and Palti, Amit and Sebastiani, Roberto},
+	booktitle={CAV},
+	volume={4590},
+	pages={547--560},
+	year={2007},
+	organization={Springer}
+}
+
+@inproceedings{hadarean2014tale,
+	title={A tale of two solvers: Eager and lazy approaches to bit-vectors},
+	author={Hadarean, Liana and Bansal, Kshitij and Jovanovi{\'c}, Dejan and Barrett, Clark and Tinelli, Cesare},
+	booktitle={Lecture Notes in Computer Science [Proceedings of the 26th Conference in Computer Aided Verification, CAV 2014]},
+	volume={8559},
+	pages={680--695},
+	year={2014},
+	organization={Springer International Publishing}
+}
+
+%% Gaussian Elimination
+@inproceedings{huang2000assertion,
+	title={Assertion checking by combined word-level ATPG and modular arithmetic constraint-solving techniques},
+	author={Huang, Chung-Yang and Cheng, Kwang-Ting},
+	booktitle={Proceedings of the 37th Annual Design Automation Conference},
+	pages={118--123},
+	year={2000},
+	organization={ACM}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% SAT solving
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Boolean simplifications
+@inproceedings{subbarayan2004niver,
+	title={NiVER: Non-increasing variable elimination resolution for preprocessing SAT instances},
+	author={Subbarayan, Sathiamoorthy and Pradhan, Dhiraj K},
+	booktitle={International conference on theory and applications of satisfiability testing},
+	pages={276--291},
+	year={2004},
+	organization={Springer}
+}
+
+
+@article{mishchenko2007abc,
+	title={ABC: A system for sequential synthesis and verification},
+	author={Mishchenko, Alan and others},
+	journal={URL http://www. eecs. berkeley. edu/\~{} alanmi/abc},
+	year={2007}
+}
+
+
+@inproceedings{biere2011preprocessing,
+	title={Preprocessing and Inprocessing Techniques in SAT.},
+	author={Biere, Armin},
+	booktitle={Haifa Verification Conference},
+	volume={1},
+	year={2011}
+}
+
+
+@inproceedings{jarvisalo2010blocked,
+	title={Blocked Clause Elimination.},
+	author={J{\"a}rvisalo, Matti and Biere, Armin and Heule, Marijn},
+	booktitle={TACAS},
+	volume={6015},
+	pages={129--144},
+	year={2010},
+	organization={Springer}
+}
+
+@article{le2001exploiting,
+	title={Exploiting the real power of unit propagation lookahead},
+	author={Le Berre, Daniel},
+	journal={Electronic Notes in Discrete Mathematics},
+	volume={9},
+	pages={59--80},
+	year={2001},
+	publisher={Elsevier}
+}
+
+@inproceedings{heule2011efficient,
+	title={Efficient CNF simplification based on binary implication graphs},
+	author={Heule, Marijn JH and J{\"a}rvisalo, Matti and Biere, Armin},
+	booktitle={International Conference on Theory and Applications of Satisfiability Testing},
+	pages={201--215},
+	year={2011},
+	organization={Springer}
+}
+
+@article{wotzlaw2013effectiveness,
+	title={Effectiveness of pre-and inprocessing for CDCL-based SAT solving},
+	author={Wotzlaw, Andreas and van der Grinten, Alexander and Speckenmeyer, Ewald},
+	journal={arXiv preprint arXiv:1310.4756},
+	year={2013}
+}
+
+
+@inproceedings{han2007alembic,
+	title={Alembic: An efficient algorithm for CNF preprocessing},
+	author={Han, Hyojung and Somenzi, Fabio},
+	booktitle={Design Automation Conference, 2007. DAC'07. 44th ACM/IEEE},
+	pages={582--587},
+	year={2007},
+	organization={IEEE}
+}
+
+@inproceedings{heule2011efficient,
+	title={Efficient CNF simplification based on binary implication graphs},
+	author={Heule, Marijn JH and J{\"a}rvisalo, Matti and Biere, Armin},
+	booktitle={International Conference on Theory and Applications of Satisfiability Testing},
+	pages={201--215},
+	year={2011},
+	organization={Springer}
+}
+
+%%% Inprocessing
+@inproceedings{jarvisalo2012inprocessing,
+	title={Inprocessing rules},
+	author={J{\"a}rvisalo, Matti and Heule, Marijn JH and Biere, Armin},
+	booktitle={International Joint Conference on Automated Reasoning},
+	pages={355--370},
+	year={2012},
+	organization={Springer}
+}
+
+%% Blocked clause elimination
+@inproceedings{jarvisalo2010blocked,
+	title={Blocked Clause Elimination.},
+	author={J{\"a}rvisalo, Matti and Biere, Armin and Heule, Marijn},
+	booktitle={TACAS},
+	volume={6015},
+	pages={129--144},
+	year={2010},
+	organization={Springer}
+}
+
+%% ZCharf?
+@inproceedings{zhang2001efficient,
+	title={Efficient conflict driven learning in a boolean satisfiability solver},
+	author={Zhang, Lintao and Madigan, Conor F and Moskewicz, Matthew H and Malik, Sharad},
+	booktitle={Proceedings of the 2001 IEEE/ACM international conference on Computer-aided design},
+	pages={279--285},
+	year={2001},
+	organization={IEEE Press}
+}
+
+@inproceedings{moskewicz2001chaff,
+	title={Chaff: Engineering an efficient SAT solver},
+	author={Moskewicz, Matthew W and Madigan, Conor F and Zhao, Ying and Zhang, Lintao and Malik, Sharad},
+	booktitle={Proceedings of the 38th annual Design Automation Conference},
+	pages={530--535},
+	year={2001},
+	organization={ACM}
+}
+
+% Binary implication graph
+@article{van2005toward,
+	title={Toward leaner binary-clause reasoning in a satisfiability solver},
+	author={Van Gelder, Allen},
+	journal={Annals of Mathematics and Artificial Intelligence},
+	volume={43},
+	number={1-4},
+	pages={239--253},
+	year={2005},
+	publisher={Springer}
+}
+
+%% Luby sequence for restart
+@article{luby1993optimal,
+	title={Optimal speedup of Las Vegas algorithms},
+	author={Luby, Michael and Sinclair, Alistair and Zuckerman, David},
+	journal={Information Processing Letters},
+	volume={47},
+	number={4},
+	pages={173--180},
+	year={1993},
+	publisher={Elsevier}
+}
+
+@inproceedings{zhang2001efficient,
+	title={Efficient conflict driven learning in a boolean satisfiability solver},
+	author={Zhang, Lintao and Madigan, Conor F and Moskewicz, Matthew H and Malik, Sharad},
+	booktitle={Proceedings of the 2001 IEEE/ACM international conference on Computer-aided design},
+	pages={279--285},
+	year={2001},
+	organization={IEEE Press}
+}
+
+%%tinisat
+@article{huang2007case,
+	title={A case for simple SAT solvers},
+	author={Huang, Jinbo},
+	journal={Principles and Practice of Constraint Programming--CP 2007},
+	pages={839--846},
+	year={2007},
+	publisher={Springer}
+}
+
+
+%% SatElite 
+@inproceedings{een2005effective,
+	title={Effective preprocessing in SAT through variable and clause elimination},
+	author={E{\'e}n, Niklas and Biere, Armin},
+	booktitle={International conference on theory and applications of satisfiability testing},
+	pages={61--75},
+	year={2005},
+	organization={Springer}
+}
+
+%% AIG
+@inproceedings{mishchenko2006dag,
+	title={DAG-aware AIG rewriting: A fresh look at combinational logic synthesis},
+	author={Mishchenko, Alan and Chatterjee, Satrajit and Brayton, Robert},
+	booktitle={Design Automation Conference, 2006 43rd ACM/IEEE},
+	pages={532--535},
+	year={2006},
+	organization={IEEE}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Applications in Symbolic execution
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+@inproceedings{liu2014comparative,
+  title={A comparative study of incremental constraint solving approaches in symbolic execution},
+  author={Liu, Tianhai and Ara{\'u}jo, Mateus and d’Amorim, Marcelo and Taghdiri, Mana},
+  booktitle={Haifa Verification Conference},
+  pages={284--299},
+  year={2014},
+  organization={Springer}
+}
+
+
+%% EXE
+@article{cadar2008exe,
+  title={EXE: automatically generating inputs of death},
+  author={Cadar, Cristian and Ganesh, Vijay and Pawlowski, Peter M and Dill, David L and Engler, Dawson R},
+  journal={ACM Transactions on Information and System Security (TISSEC)},
+  volume={12},
+  number={2},
+  pages={10},
+  year={2008},
+  publisher={ACM}
+}
+
+
+%% CUTE
+@inproceedings{sen2005cute,
+  title={CUTE: a concolic unit testing engine for C},
+  author={Sen, Koushik and Marinov, Darko and Agha, Gul},
+  booktitle={ACM SIGSOFT Software Engineering Notes},
+  volume={30},
+  number={5},
+  pages={263--272},
+  year={2005},
+  organization={ACM}
+}
+
+%% KLEE
+@inproceedings{cadar2008klee,
+  title={KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs.},
+  author={Cadar, Cristian and Dunbar, Daniel and Engler, Dawson R and others},
+  booktitle={OSDI},
+  volume={8},
+  pages={209--224},
+  year={2008}
+}
+
+
+%%RevNIC
+@inproceedings{chipounov2010reverse,
+  title={Reverse engineering of binary device drivers with RevNIC},
+  author={Chipounov, Vitaly and Candea, George},
+  booktitle={Proceedings of the 5th European conference on Computer systems},
+  pages={167--180},
+  year={2010},
+  organization={ACM}
+}
+
+
+%% DART
+@inproceedings{godefroid2005dart,
+  title={DART: directed automated random testing},
+  author={Godefroid, Patrice and Klarlund, Nils and Sen, Koushik},
+  booktitle={ACM Sigplan Notices},
+  volume={40},
+  number={6},
+  pages={213--223},
+  year={2005},
+  organization={ACM}
+}
+
+
+
+@inproceedings{khurshid2003generalized,
+  title={Generalized symbolic execution for model checking and testing},
+  author={Khurshid, Sarfraz and P{\u{a}}s{\u{a}}reanu, Corina S and Visser, Willem},
+  booktitle={International Conference on Tools and Algorithms for the Construction and Analysis of Systems},
+  pages={553--568},
+  year={2003},
+  organization={Springer}
+}
+
+%% Semfix
+@inproceedings{nguyen2013semfix,
+  title={Semfix: Program repair via semantic analysis},
+  author={Nguyen, Hoang Duong Thien and Qi, Dawei and Roychoudhury, Abhik and Chandra, Satish},
+  booktitle={Proceedings of the 2013 International Conference on Software Engineering},
+  pages={772--781},
+  year={2013},
+  organization={IEEE Press}
+}
+
+%% Angelix
+@inproceedings{mechtaev2016angelix,
+  title={Angelix: Scalable multiline program patch synthesis via symbolic analysis},
+  author={Mechtaev, Sergey and Yi, Jooyong and Roychoudhury, Abhik},
+  booktitle={Software Engineering (ICSE), 2016 IEEE/ACM 38th International Conference on},
+  pages={691--701},
+  year={2016},
+  organization={IEEE}
+}
+
+@inproceedings{perry2017accelerating,
+	title={Accelerating array constraints in symbolic execution},
+	author={Perry, David M and Mattavelli, Andrea and Zhang, Xiangyu and Cadar, Cristian},
+	booktitle={Proceedings of the 26th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+	pages={68--78},
+	year={2017},
+	organization={ACM}
+}
+
+%%
+@inproceedings{bounimova2013billions,
+	title={Billions and billions of constraints: Whitebox fuzz testing in production},
+	author={Bounimova, Ella and Godefroid, Patrice and Molnar, David},
+	booktitle={Proceedings of the 2013 International Conference on Software Engineering},
+	pages={122--131},
+	year={2013},
+	organization={IEEE Press}
+}
+
+
+@article{avgerinos2014exploiting,
+	title={Exploiting Trade-offs in Symbolic Execution for Identifying Security Bugs},
+	author={Avgerinos, Athanasios},
+	year={2014}
+}
+
+
+%% Green
+@inproceedings{visser2012green,
+	title={Green: reducing, reusing and recycling constraints in program analysis},
+	author={Visser, Willem and Geldenhuys, Jaco and Dwyer, Matthew B},
+	booktitle={Proceedings of the ACM SIGSOFT 20th International Symposium on the Foundations of Software Engineering},
+	pages={58},
+	year={2012},
+	organization={ACM}
+}
+
+
+%% Klee Multiple, CAV 13
+@inproceedings{palikareva2013multi,
+	title={Multi-solver support in symbolic execution},
+	author={Palikareva, Hristina and Cadar, Cristian},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={53--68},
+	year={2013},
+	organization={Springer}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Machine learning for SAT/SMT
+%%
+%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{hutter2007automatic,
+	title={Automatic algorithm configuration based on local search},
+	author={Hutter, Frank and Hoos, Holger H and St{\"u}tzle, Thomas},
+	booktitle={AAAI},
+	volume={7},
+	pages={1152--1157},
+	year={2007}
+}
+
+@article{hutter2009paramils,
+  title={ParamILS: an automatic algorithm configuration framework},
+  author={Hutter, Frank and Hoos, Holger H and Leyton-Brown, Kevin and St{\"u}tzle, Thomas},
+  journal={Journal of Artificial Intelligence Research},
+  volume={36},
+  number={1},
+  pages={267--306},
+  year={2009}
+}
+
+%%% Parameter imporance
+@inproceedings{hutter2014efficient,
+  title={An efficient approach for assessing hyperparameter importance},
+  author={Hutter, Frank and Hoos, Holger and Leyton-Brown, Kevin},
+  booktitle={International Conference on Machine Learning},
+  pages={754--762},
+  year={2014}
+}
+
+
+%%% SAT Solvign
+% SATZilla
+@article{xu2008satzilla,
+  title={SATzilla: portfolio-based algorithm selection for SAT},
+  author={Xu, Lin and Hutter, Frank and Hoos, Holger H and Leyton-Brown, Kevin},
+  journal={Journal of artificial intelligence research},
+  volume={32},
+  pages={565--606},
+  year={2008}
+}
+
+@article{xu2012evaluating,
+  title={Evaluating component solver contributions to portfolio-based algorithm selectors},
+  author={Xu, Lin and Hutter, Frank and Hoos, Holger and Leyton-Brown, Kevin},
+  journal={Theory and Applications of Satisfiability Testing--SAT 2012},
+  pages={228--241},
+  year={2012},
+  publisher={Springer}
+}
+
+
+
+%%% First-Order Theorem Proving
+@article{kuhlwein2015males,
+  title={MaLeS: A framework for automatic tuning of automated theorem provers},
+  author={K{\"u}hlwein, Daniel and Urban, Josef},
+  journal={Journal of Automated Reasoning},
+  volume={55},
+  number={2},
+  pages={91--116},
+  year={2015},
+  publisher={Springer}
+}
+
+
+%%% Computer Algebra
+@incollection{huang2014applying,
+  title={Applying machine learning to the problem of choosing a heuristic to select the variable ordering for cylindrical algebraic decomposition},
+  author={Huang, Zongyan and England, Matthew and Wilson, David and Davenport, James H and Paulson, Lawrence C and Bridge, James},
+  booktitle={Intelligent Computer Mathematics},
+  pages={92--107},
+  year={2014},
+  publisher={Springer}
+}
+
+@inproceedings{huang2016using,
+  title={Using machine learning to decide when to precondition cylindrical algebraic decomposition with Groebner bases},
+  author={Huang, Zongyan and England, Matthew and Davenport, James H and Paulson, Lawrence C},
+  booktitle={Symbolic and Numeric Algorithms for Scientific Computing (SYNASC), 2016 18th International Symposium on},
+  pages={45--52},
+  year={2016},
+  organization={IEEE}
+}
+
+%%% Theorem proving
+@inproceedings{fuchs1998automatic,
+	title={Automatic selection of search-guiding heuristics for theorem proving},
+	author={Fuchs, Matthias},
+	booktitle={Proceedings of the 10th Florida AI Research Society Conference},
+	pages={1--5},
+	year={1998}
+}
+
+@techreport{bridge2010machine,
+	title={Machine learning and automated theorem proving},
+	author={Bridge, James P},
+	year={2010},
+	institution={University of Cambridge, Computer Laboratory}
+}
+
+@article{kuhlwein2015males,
+	title={MaLeS: A framework for automatic tuning of automated theorem provers},
+	author={K{\"u}hlwein, Daniel and Urban, Josef},
+	journal={Journal of Automated Reasoning},
+	volume={55},
+	number={2},
+	pages={91--116},
+	year={2015},
+	publisher={Springer}
+}
+
+
+
+@inproceedings{mrazek2017optimizing,
+	title={Optimizing and Caching SMT Queries in SymDIVINE},
+	author={Mr{\'a}zek, Jan and Jon{\'a}{\v{s}}, Martin and {\v{S}}till, Vladim{\'\i}r and Lauko, Henrich and Barnat, Ji{\v{r}}{\'\i}},
+	booktitle={International Conference on Tools and Algorithms for the Construction and Analysis of Systems},
+	pages={390--393},
+	year={2017},
+	organization={Springer}
+}
+
+@inproceedings{cadar2015targeted,
+  title={Targeted program transformations for symbolic execution},
+  author={Cadar, Cristian},
+  booktitle={Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering},
+  pages={906--909},
+  year={2015},
+  organization={ACM}
+}
+
+@inproceedings{dong2015studying,
+  title={Studying the influence of standard compiler optimizations on symbolic execution},
+  author={Dong, Shiyu and Olivo, Oswaldo and Zhang, Lingming and Khurshid, Sarfraz},
+  booktitle={Software Reliability Engineering (ISSRE), 2015 IEEE 26th International Symposium on},
+  pages={205--215},
+  year={2015},
+  organization={IEEE}
+}
+
+@inproceedings{wagner2013overify,
+  title={-Overify: Optimizing Programs for Fast Verification},
+  author={Wagner, Jonas and Kuznetsov, Volodymyr and Candea, George},
+  booktitle={14th Workshop on Hot Topics in Operating Systems (HotOS XIV)},
+  number={EPFL-CONF-186012},
+  year={2013}
+}
+
+@article{ferles2017failure,
+  title={Failure-Directed Program Trimming (Extended Version)},
+  author={Ferles, Kostas and W{\"u}stholz, Valentin and Christakis, Maria and Dillig, Isil},
+  journal={arXiv preprint arXiv:1706.04468},
+  year={2017}
+}
+
+
+@article{biere2013lingeling,
+  title={Lingeling, Plingeling and Treengeling entering the SAT competition 2013},
+  author={Biere, Armin},
+  journal={Proceedings of SAT Competition},
+  volume={2013},
+  year={2013}
+}
+
+@phdthesis{johannsen2002speeding,
+  title={Speeding up hardware verification by automated data path scaling},
+  author={Johannsen, Peer},
+  year={2002},
+  school={Christian-Albrechts Universit{\"a}t Kiel}
+}
+
+
+@inproceedings{singh2016swapper,
+	title={Swapper: A framework for automatic generation of formula simplifiers based on conditional rewrite rules},
+	author={Singh, Rohit and Solar-Lezama, Armando},
+	booktitle={Formal Methods in Computer-Aided Design (FMCAD), 2016},
+	pages={185--192},
+	year={2016},
+	organization={IEEE}
+}
+
+
+@book{nipkow2002isabelle,
+	title={Isabelle/HOL: a proof assistant for higher-order logic},
+	author={Nipkow, Tobias and Paulson, Lawrence C and Wenzel, Markus},
+	volume={2283},
+	year={2002},
+	publisher={Springer Science \& Business Media}
+}
+
+
+@inproceedings{jha2009beaver,
+  title={Beaver: Engineering an efficient smt solver for bit-vector arithmetic},
+  author={Jha, Susmit and Limaye, Rhishikesh and Seshia, Sanjit},
+  booktitle={Computer Aided Verification},
+  pages={668--674},
+  year={2009},
+  organization={Springer}
+}
+
+@inproceedings{cook1971complexity,
+  title={The complexity of theorem-proving procedures},
+  author={Cook, Stephen A},
+  booktitle={Proceedings of the third annual ACM symposium on Theory of computing},
+  pages={151--158},
+  year={1971},
+  organization={ACM}
+}
+
+@phdthesis{franzen2010efficient,
+	title={Efficient solving of the satisfiability modulo bit-vectors problem and some extensions to SMT},
+	author={Franz{\'e}n, Anders},
+	year={2010},
+	school={University of Trento}
+}
+
+@article{godefroid2012sage,
+	title={SAGE: whitebox fuzzing for security testing},
+	author={Godefroid, Patrice and Levin, Michael Y and Molnar, David},
+	journal={Queue},
+	volume={10},
+	number={1},
+	pages={20},
+	year={2012},
+	publisher={ACM}
+}
+
+@article{de2013strategy,
+	title={The Strategy Challenge in SMT Solving.},
+	author={de Moura, Leonardo Mendon{\c{c}}a and Passmore, Grant Olney},
+	journal={Automated Reasoning and Mathematics},
+	volume={7788},
+	pages={15--44},
+	year={2013},
+	publisher={Springer}
+}
+
+
+@article{hutter2009paramils,
+	title={ParamILS: an automatic algorithm configuration framework},
+	author={Hutter, Frank and Hoos, Holger H and Leyton-Brown, Kevin and St{\"u}tzle, Thomas},
+	journal={Journal of Artificial Intelligence Research},
+	volume={36},
+	number={1},
+	pages={267--306},
+	year={2009}
+}
+
+
+
+% SATZilla
+@article{xu2008satzilla,
+	title={SATzilla: portfolio-based algorithm selection for SAT},
+	author={Xu, Lin and Hutter, Frank and Hoos, Holger H and Leyton-Brown, Kevin},
+	journal={Journal of artificial intelligence research},
+	volume={32},
+	pages={565--606},
+	year={2008}
+}

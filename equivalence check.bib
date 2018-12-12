@@ -1,0 +1,535 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   
+%%   
+%%            Equivalence checking
+%%   
+%%   - Applications
+%%   - Equivalence checking
+%%   - General Invariant inference
+%%     
+%%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%%
+%% Applications of equivalence proof
+%%
+%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%
+%% Semantic Differencing 
+%%%%
+@inproceedings{partush2013abstract,
+	title={Abstract semantic differencing for numerical programs},
+	author={Partush, Nimrod and Yahav, Eran},
+	booktitle={International Static Analysis Symposium},
+	pages={238--258},
+	year={2013},
+	organization={Springer}
+}
+
+@inproceedings{lahiri2013differential,
+	title={Differential assertion checking},
+	author={Lahiri, Shuvendu K and McMillan, Kenneth L and Sharma, Rahul and Hawblitzel, Chris},
+	booktitle={Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering},
+	pages={345--355},
+	year={2013},
+	organization={ACM}
+}
+
+%%%%
+%% Algorihtm recognition
+%%%%
+@inproceedings{alias2003algorithm,
+	title={Algorithm Recognition based on Demand-Driven Data-flow Analysis.},
+	author={Alias, Christophe and Barthou, Denis},
+	booktitle={WCRE},
+	volume={3},
+	pages={296--305},
+	year={2003}
+}
+
+@article{alias2004recognition,
+	title={On the recognition of algorithm templates},
+	author={Alias, Christophe and Barthou, Denis},
+	journal={Electronic Notes in Theoretical Computer Science},
+	volume={82},
+	number={2},
+	pages={395--409},
+	year={2004},
+	publisher={Elsevier}
+}
+
+%%%%
+%% Information flow analysis
+%%%%
+@inproceedings{barthe2004secure,
+	title={Secure information flow by self-composition},
+	author={Barthe, Gilles and D'Argenio, Pedro R and Rezk, Tamara},
+	booktitle={Computer Security Foundations Workshop, 2004. Proceedings. 17th IEEE},
+	pages={100--114},
+	year={2004},
+	organization={IEEE}
+}
+
+@inproceedings{terauchi2005secure,
+	title={Secure information flow as a safety problem},
+	author={Terauchi, Tachio and Aiken, Alex},
+	booktitle={International Static Analysis Symposium},
+	pages={352--367},
+	year={2005},
+	organization={Springer}
+}
+
+%% k-safety
+@inproceedings{sousa2016cartesian,
+	title={Cartesian hoare logic for verifying k-safety properties},
+	author={Sousa, Marcelo and Dillig, Isil},
+	booktitle={ACM SIGPLAN Notices},
+	volume={51},
+	number={6},
+	pages={57--69},
+	year={2016},
+	organization={ACM}
+}
+
+%%%%
+%% compiler validation
+%%%%
+@article{lopes2015provably,
+	title={Provably correct peephole optimizations with alive},
+	author={Lopes, Nuno P and Menendez, David and Nagarakatte, Santosh and Regehr, John},
+	journal={ACM SIGPLAN Notices},
+	volume={50},
+	number={6},
+	pages={22--32},
+	year={2015},
+	publisher={ACM}
+}
+
+@inproceedings{leroy2006formal,
+	title={Formal certification of a compiler back-end or: programming a compiler with a proof assistant},
+	author={Leroy, Xavier},
+	booktitle={ACM SIGPLAN Notices},
+	volume={41},
+	number={1},
+	pages={42--54},
+	year={2006},
+	organization={ACM}
+}
+@inproceedings{NECULA2000,
+	title={Translation validation for an optimizing compiler},
+	author={Necula, George C},
+	booktitle={ACM sigplan notices},
+	volume={35},
+	number={5},
+	pages={83--94},
+	year={2000},
+	organization={ACM}
+}
+
+@inproceedings{pnueli1998,
+	title={Translation validation},
+	author={Pnueli, Amir and Siegel, Michael and Singerman, Eli},
+	booktitle={International Conference on Tools and Algorithms for the Construction and Analysis of Systems},
+	pages={151--166},
+	year={1998},
+	organization={Springer}
+}
+
+@article{rinard2003,
+	title={Credible compilation},
+	author={Rinard, Martin C},
+	year={2003}
+}
+
+@article{zuck2003voc,
+	title={Voc: A methodology for the translation validation of optimizingcompilers},
+	author={Zuck, Lenore D and Pnueli, Amir and Goldberg, Benjamin},
+	journal={J. UCS},
+	volume={9},
+	number={3},
+	pages={223--247},
+	year={2003}
+}
+
+%%%%
+%% Regression verification
+%%%%
+@inproceedings{godlin2009regression,
+	title={Regression verification},
+	author={Godlin, Benny and Strichman, Ofer},
+	booktitle={Proceedings of the 46th Annual Design Automation Conference},
+	pages={466--471},
+	year={2009},
+	organization={ACM}
+}
+
+@article{godlin2013regression,
+	title={Regression verification: proving the equivalence of similar programs},
+	author={Godlin, Benny and Strichman, Ofer},
+	journal={Software Testing, Verification and Reliability},
+	volume={23},
+	number={3},
+	pages={241--258},
+	year={2013},
+	publisher={Wiley Online Library}
+}
+
+@inproceedings{sousa2016cartesian,
+	title={Cartesian hoare logic for verifying k-safety properties},
+	author={Sousa, Marcelo and Dillig, Isil},
+	booktitle={ACM SIGPLAN Notices},
+	volume={51},
+	number={6},
+	pages={57--69},
+	year={2016},
+	organization={ACM}
+}
+
+@inproceedings{beyer2015boosting,
+	title={Boosting k-induction with continuously-refined invariants},
+	author={Beyer, Dirk and Dangl, Matthias and Wendler, Philipp},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={622--640},
+	year={2015},
+	organization={Springer}
+}
+
+
+%%%%%%%%%%%%%%%%%%
+%%
+%%  Equivalence proof/checking
+%%
+%%%%%%%%%%%%%%%%%%%%%
+
+@article{sangiorgi2009origins,
+	title={On the origins of bisimulation and coinduction},
+	author={Sangiorgi, Davide},
+	journal={ACM Transactions on Programming Languages and Systems (TOPLAS)},
+	volume={31},
+	number={4},
+	pages={15},
+	year={2009},
+	publisher={ACM}
+}
+
+@inproceedings{kundu2009proving,
+	title={Proving optimizations correct using parameterized program equivalence},
+	author={Kundu, Sudipta and Tatlock, Zachary and Lerner, Sorin},
+	booktitle={ACM Sigplan Notices},
+	volume={44},
+	number={6},
+	pages={327--337},
+	year={2009},
+	organization={ACM}
+}
+
+%%%%%
+%% Symbolic execution based 
+%%%%%
+@inproceedings{matsumoto2006equivalence,
+	title={Equivalence checking of C programs by locally performing symbolic simulation on dependence graphs},
+	author={Matsumoto, Takeshi and Saito, Hiroshi and Fujita, Masahiro},
+	booktitle={Proceedings of the 7th International Symposium on Quality Electronic Design},
+	pages={370--375},
+	year={2006},
+	organization={IEEE Computer Society}
+}
+
+@inproceedings{person2008differential,
+	title={Differential symbolic execution},
+	author={Person, Suzette and Dwyer, Matthew B and Elbaum, Sebastian and Pǎsǎreanu, Corina S},
+	booktitle={Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of software engineering},
+	pages={226--237},
+	year={2008},
+	organization={ACM}
+}
+
+@inproceedings{ramos2011practical,
+	title={Practical, low-effort equivalence verification of real code},
+	author={Ramos, David A and Engler, Dawson R},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={669--685},
+	year={2011},
+	organization={Springer}
+}
+
+%% Nuno Alive (PLDI 15)
+@article{lopes2015provably,
+	title={Provably correct peephole optimizations with alive},
+	author={Lopes, Nuno P and Menendez, David and Nagarakatte, Santosh and Regehr, John},
+	journal={ACM SIGPLAN Notices},
+	volume={50},
+	number={6},
+	pages={22--32},
+	year={2015},
+	publisher={ACM}
+}
+
+%%%%%
+%% Recurrence solving based
+%%%%%
+@inproceedings{bozga2010fast,
+	title={Fast acceleration of ultimately periodic relations},
+	author={Bozga, Marius and Iosif, Radu and Kone{\v{c}}n{\`y}, Filip},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={227--242},
+	year={2010},
+	organization={Springer}
+}
+
+@inproceedings{de2016polynomial,
+	title={Polynomial invariants by linear algebra},
+	author={de Oliveira, Steven and Bensalem, Saddek and Prevosto, Virgile},
+	booktitle={International Symposium on Automated Technology for Verification and Analysis},
+	pages={479--494},
+	year={2016},
+	organization={Springer}
+}
+
+@inproceedings{barthou2002equiv,
+	title={On the equivalence of two systems of affine recurrence equations},
+	author={Barthou, Denis and Feautrier, Paul and Redon, Xavier},
+	booktitle={European Conference on Parallel Processing},
+	pages={309--313},
+	year={2002},
+	organization={Springer}
+}
+
+
+%% Nuno CORK (SPIN 13)
+@inproceedings{lopes2013automatic,
+	title={Automatic equivalence checking of UF+ IA programs},
+	author={Lopes, Nuno P and Monteiro, Jos{\'e}},
+	booktitle={International SPIN Workshop on Model Checking of Software},
+	pages={282--300},
+	year={2013},
+	organization={Springer}
+}
+
+
+%% widening for recurrence
+@inproceedings{shashidhar2005veri,
+	title={Verification of source code transformations by program equivalence checking},
+	author={Shashidhar, KC and Bruynooghe, Maurice and Catthoor, Francky and Janssens, Gerda},
+	booktitle={International Conference on Compiler Construction},
+	pages={221--236},
+	year={2005},
+	organization={Springer}
+}
+
+
+@inproceedings{humenberger2017automated,
+	title={Automated generation of non-linear loop invariants utilizing hypergeometric Sequences},
+	author={Humenberger, Andreas and Jaroschek, Maximilian and Kov{\'a}cs, Laura},
+	booktitle={Proceedings of the 2017 ACM on International Symposium on Symbolic and Algebraic Computation},
+	pages={221--228},
+	year={2017},
+	organization={ACM}
+}
+
+@inproceedings{rodriguez2004automatic,
+	title={Automatic generation of polynomial loop invariants: Algebraic foundations},
+	author={Rodr{\'\i}guez-Carbonell, Enric and Kapur, Deepak},
+	booktitle={Proceedings of the 2004 international symposium on Symbolic and algebraic computation},
+	pages={266--273},
+	year={2004},
+	organization={ACM}
+}
+
+@inproceedings{verdoolaege2009equivalence,
+	title={Equivalence checking of static affine programs using widening to handle recurrences},
+	author={Verdoolaege, Sven and Janssens, Gerda and Bruynooghe, Maurice},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={599--613},
+	year={2009},
+	organization={Springer}
+}
+
+
+@inproceedings{felsing2014automating,
+	title={Automating regression verification},
+	author={Felsing, Dennis and Grebing, Sarah and Klebanov, Vladimir and R{\"u}mmer, Philipp and Ulbrich, Mattias},
+	booktitle={Proceedings of the 29th ACM/IEEE international conference on Automated software engineering},
+	pages={349--360},
+	year={2014},
+	organization={ACM}
+}
+
+
+%% Rewriting system
+@article{fuhs2017verifying,
+	title={Verifying procedural programs via constrained rewriting induction},
+	author={Fuhs, Carsten and Kop, Cynthia and Nishida, Naoki},
+	journal={ACM Transactions on Computational Logic (TOCL)},
+	volume={18},
+	number={2},
+	pages={14},
+	year={2017},
+	publisher={ACM}
+}
+
+%%%%%%%%%%%%%%%%%%%%
+%%
+%%  General Invariant inference
+%%
+%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%
+% Non-linear invariants
+%%%%%%
+
+@article{sankaranarayanan2004non,
+	title={Non-linear loop invariant generation using Gr{\"o}bner bases},
+	author={Sankaranarayanan, Sriram and Sipma, Henny B and Manna, Zohar},
+	journal={ACM SIGPLAN Notices},
+	volume={39},
+	number={1},
+	pages={318--329},
+	year={2004},
+	publisher={ACM}
+}
+
+@article{muller2004computing,
+	title={Computing polynomial program invariants},
+	author={M{\"u}ller-Olm, Markus and Seidl, Helmut},
+	journal={Information Processing Letters},
+	volume={91},
+	number={5},
+	pages={233--244},
+	year={2004},
+	publisher={Elsevier}
+}
+
+
+@article{rodriguez2007generating,
+	title={Generating all polynomial invariants in simple loops},
+	author={Rodr{\'\i}guez-Carbonell, Enric and Kapur, Deepak},
+	journal={Journal of Symbolic Computation},
+	volume={42},
+	number={4},
+	pages={443--476},
+	year={2007},
+	publisher={Elsevier}
+}
+
+%%%%%
+% Data driven
+%%%%%
+
+%% Daikon
+@inproceedings{ernst2000quickly,
+	title={Quickly detecting relevant program invariants},
+	author={Ernst, Michael D and Czeisler, Adam and Griswold, William G and Notkin, David},
+	booktitle={Proceedings of the 22nd international conference on Software engineering},
+	pages={449--458},
+	year={2000},
+	organization={ACM}
+}
+
+%% HOUDINI
+@inproceedings{flanagan2001houdini,
+	title={Houdini, an annotation assistant for ESC/Java},
+	author={Flanagan, Cormac and Leino, K Rustan M},
+	booktitle={International Symposium of Formal Methods Europe},
+	pages={500--517},
+	year={2001},
+	organization={Springer}
+}
+
+%% ICE
+@inproceedings{garg2014ice,
+	title={ICE: A robust framework for learning invariants},
+	author={Garg, Pranav and L{\"o}ding, Christof and Madhusudan, P and Neider, Daniel},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={69--87},
+	year={2014},
+	organization={Springer}
+}
+
+%%%%%
+% abstract interpretation
+%%%%%
+@inproceedings{cousot1977abstract,
+	title={Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints},
+	author={Cousot, Patrick and Cousot, Radhia},
+	booktitle={Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages},
+	pages={238--252},
+	year={1977},
+	organization={ACM}
+}
+
+
+@article{mine2006octagon,
+	title={The octagon abstract domain},
+	author={Min{\'e}, Antoine},
+	journal={Higher-order and symbolic computation},
+	volume={19},
+	number={1},
+	pages={31--100},
+	year={2006},
+	publisher={Springer}
+}
+
+@inproceedings{laviron2009subpolyhedra,
+	title={Subpolyhedra: A (more) scalable approach to infer linear inequalities},
+	author={Laviron, Vincent and Logozzo, Francesco},
+	booktitle={International Workshop on Verification, Model Checking, and Abstract Interpretation},
+	pages={229--244},
+	year={2009},
+	organization={Springer}
+}
+
+%%%%%
+% abductive inference
+%%%%%
+@inproceedings{dillig2013inductive,
+	title={Inductive invariant generation via abductive inference},
+	author={Dillig, Isil and Dillig, Thomas and Li, Boyang and McMillan, Ken},
+	booktitle={Acm Sigplan Notices},
+	volume={48},
+	number={10},
+	pages={443--456},
+	year={2013},
+	organization={ACM}
+}
+
+
+
+%%%%%
+% Interpolation
+%%%%%
+@inproceedings{mcmillan2003interpolation,
+	title={Interpolation and SAT-based model checking},
+	author={McMillan, Kenneth L},
+	booktitle={International Conference on Computer Aided Verification},
+	pages={1--13},
+	year={2003},
+	organization={Springer}
+}
+
+%%%%%
+% IC3/PDR
+%%%%%
+@inproceedings{bradley2011sat,
+	title={SAT-based model checking without unrolling},
+	author={Bradley, Aaron R},
+	booktitle={International Workshop on Verification, Model Checking, and Abstract Interpretation},
+	pages={70--87},
+	year={2011},
+	organization={Springer}
+}
+
+@inproceedings{een2011efficient,
+	title={Efficient implementation of property directed reachability},
+	author={Een, Niklas and Mishchenko, Alan and Brayton, Robert},
+	booktitle={Formal Methods in Computer-Aided Design (FMCAD), 2011},
+	pages={125--134},
+	year={2011},
+	organization={IEEE}
+}
+
