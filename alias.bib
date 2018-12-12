@@ -1,0 +1,1235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%%           Pointer Analysis 
+%%   - Basics
+%%   - Flow and context in-sensitive
+%%   - Flow and/or context sensitive
+%%   - Demand-driven
+%%   - Call graph
+%%   - Other applications
+%%   - Alias set analysis
+     - Static + Dynamic
+%%   - Pointer disambiguate
+     - Different SSA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%
+%%
+%% Basics
+%%
+%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{lerch2015access,
+	title={Access-path abstraction: Scaling field-sensitive data-flow analysis with unbounded access paths (t)},
+	author={Lerch, Johannes and Sp{\"a}th, Johannes and Bodden, Eric and Mezini, Mira},
+	booktitle={Automated Software Engineering (ASE), 2015 30th IEEE/ACM International Conference on},
+	pages={619--629},
+	year={2015},
+	organization={IEEE}
+}
+
+@INCOLLECTION{jones.muchnick.81,
+	author = "Neil D. Jones and Steven S. Muchnick",
+	title = "Flow Analysis and Optimization of {L}isp-like Structures",
+	pages = "102--131",
+	editor = "Steven S. Muchnick and Neil D. Jones",
+	booktitle = "Program Flow Analysis: Theory and Applications",
+	publisher = "Prentice Hall",
+	year = 1981,
+}
+
+@INPROCEEDINGS{landi.popl.91,
+	author = "William Landi and Barbara G. Ryder",
+	title = "Pointer-Induced Aliasing: A Problem Classification",
+	crossref =     "POPL91",
+	pages = "93--103",
+}
+
+@INPROCEEDINGS{chase.pldi.90,
+	author = "David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+	title = "Analysis of Pointers and Structures",
+	crossref =     "PLDI90",
+	pages = "296--310",
+}
+
+@INPROCEEDINGS{larus.pldi.88,
+	author = "James R. Larus and Paul N. Hilfinger",
+	title = "Detecting Conflicts Between Structure Accesses",
+	crossref =     "PLDI88",
+	pages = "21--34",
+}
+
+@article{reps1998program,
+	title={Program analysis via graph reachability1},
+	author={Reps, Thomas},
+	journal={Information and software technology},
+	volume={40},
+	number={11-12},
+	pages={701--726},
+	year={1998},
+	publisher={Elsevier}
+}
+
+%% magic set transformation
+@article{ramakrishnan1991magic,
+	title={Magic templates: A spellbinding approach to logic programs},
+	author={Ramakrishnan, Raghu},
+	journal={The Journal of Logic Programming},
+	volume={11},
+	number={3-4},
+	pages={189--216},
+	year={1991},
+	publisher={Elsevier}
+}
+
+@article{chen1996tabled,
+	title={Tabled evaluation with delaying for general logic programs},
+	author={Chen, Weidong and Warren, David S},
+	journal={Journal of the ACM (JACM)},
+	volume={43},
+	number={1},
+	pages={20--74},
+	year={1996},
+	publisher={ACM}
+}
+
+
+%% Incremantl alias
+@inproceedings{vivien2001incrementalized,
+	title={Incrementalized pointer and escape analysis},
+	author={Vivien, Fr{\'e}d{\'e}ric and Rinard, Martin},
+	booktitle={ACM SIGPLAN Notices},
+	volume={36},
+	number={5},
+	pages={35--46},
+	year={2001},
+	organization={ACM}
+}
+
+@article{smaragdakis2015pointer,
+	title={Pointer analysis},
+	author={Smaragdakis, Yannis and Balatsouras, George and others},
+	journal={Foundations and Trends{\textregistered} in Programming Languages},
+	volume={2},
+	number={1},
+	pages={1--69},
+	year={2015},
+	publisher={Now Publishers, Inc.}
+}
+
+@inproceedings{hind2001pointer,
+	title={Pointer analysis: Haven't we solved this problem yet?},
+	author={Hind, Michael},
+	booktitle={Proceedings of the 2001 ACM SIGPLAN-SIGSOFT workshop on Program analysis for software tools and engineering},
+	pages={54--61},
+	year={2001},
+	organization={ACM}
+}
+
+@inproceedings{ryder2003dimensions,
+	title={Dimensions of precision in reference analysis of object-oriented programming languages},
+	author={Ryder, Barbara G},
+	booktitle={International Conference on Compiler Construction},
+	pages={126--137},
+	year={2003},
+	organization={Springer}
+}
+
+%%%%%%%%%%%%%%%%
+%%
+%%  Flow- and context- insensitive analysis
+%%
+%%%%%%%%%%%%%%%%%%%
+
+%% Anderson
+@phdthesis{andersen1994program,
+	title={Program analysis and specialization for the C programming language},
+	author={Andersen, Lars Ole},
+	year={1994},
+	school={University of Cophenhagen}
+}
+
+%%% Steensgaard Algorithm
+@inproceedings{steensgaard1996points,
+	title={Points-to analysis in almost linear time},
+	author={Steensgaard, Bjarne},
+	booktitle={Proceedings of the 23rd ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+	pages={32--41},
+	year={1996},
+	organization={ACM}
+}
+
+%% Das's one-level
+@article{das2000unification,
+	title={Unification-based pointer analysis with directional assignments},
+	author={Das, Manuvir},
+	journal={Acm Sigplan Notices},
+	volume={35},
+	number={5},
+	pages={35--46},
+	year={2000},
+	publisher={ACM}
+}
+
+@inproceedings{zhang2013fast,
+	title={Fast algorithms for Dyck-CFL-reachability with applications to alias analysis},
+	author={Zhang, Qirun and Lyu, Michael R and Yuan, Hao and Su, Zhendong},
+	booktitle={ACM SIGPLAN Notices},
+	volume={48},
+	number={6},
+	pages={435--446},
+	year={2013},
+	organization={ACM}
+}
+
+@inproceedings{sui2016svf,
+	title={SVF: interprocedural static value-flow analysis in 
+	},
+	author={Sui, Yulei and Xue, Jingling},
+	booktitle={Proceedings of the 25th International Conference on Compiler Construction},
+	pages={265--266},
+	year={2016},
+	organization={ACM}
+}
+
+
+
+@inproceedings{balatsouras2016structure,
+	title={Structure-sensitive points-to analysis for C and C++},
+	author={Balatsouras, George and Smaragdakis, Yannis},
+	booktitle={International Static Analysis Symposium},
+	pages={84--104},
+	year={2016},
+	organization={Springer}
+}
+
+%% Pearce field-sensitive
+@article{pearce2007efficient,
+	title={Efficient field-sensitive pointer analysis of C},
+	author={Pearce, David J and Kelly, Paul HJ and Hankin, Chris},
+	journal={ACM Transactions on Programming Languages and Systems (TOPLAS)},
+	volume={30},
+	number={1},
+	pages={4},
+	year={2007},
+	publisher={ACM}
+}
+
+%% virtual call
+@inproceedings{fan2017boosting,
+	title={Boosting the precision of virtual call integrity protection with partial pointer analysis for C++},
+	author={Fan, Xiaokang and Sui, Yulei and Liao, Xiangke and Xue, Jingling},
+	booktitle={Proceedings of the 26th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+	pages={329--340},
+	year={2017},
+	organization={ACM}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%
+%% Context and/or flow sensitive analysis
+%%
+%%%%%%%%%%%%%%%%%%%
+@book{chase1990analysis,
+	title={Analysis of pointers and structures},
+	author={Chase, David R and Wegman, Mark and Zadeck, F Kenneth},
+	volume={25},
+	number={6},
+	year={1990},
+	publisher={ACM}
+}
+
+@inproceedings{choi1993efficient,
+	title={Efficient flow-sensitive interprocedural computation of pointer-induced aliases and side effects},
+	author={Choi, Jong-Deok and Burke, Michael and Carini, Paul},
+	booktitle={Proceedings of the 20th ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+	pages={232--245},
+	year={1993},
+	organization={ACM}
+}
+
+@article{choi1994efficient,
+	title={On the efficient engineering of ambitious program analysis},
+	author={Choi, Jong-Deok and Cytron, Ron and Ferrante, Jeanne},
+	journal={IEEE Transactions on Software Engineering},
+	number={2},
+	pages={105--114},
+	year={1994},
+	publisher={IEEE}
+}
+@inproceedings{emami1994context,
+	title={Context-sensitive interprocedural points-to analysis in the presence of function pointers},
+	author={Emami, Maryam and Ghiya, Rakesh and Hendren, Laurie J},
+	booktitle={ACM SIGPLAN Notices},
+	volume={29},
+	number={6},
+	pages={242--256},
+	year={1994},
+	organization={ACM}
+}
+
+@book{wilson1995efficient,
+	title={Efficient context-sensitive pointer analysis for C programs},
+	author={Wilson, Robert P and Lam, Monica S},
+	volume={30},
+	number={6},
+	year={1995},
+	publisher={ACM}
+}
+
+@inproceedings{chow1996effective,
+	title={Effective representation of aliases and indirect memory operations in SSA form},
+	author={Chow, Fred and Chan, Sun and Liu, Shin-Ming and Lo, Raymond and Streich, Mark},
+	booktitle={International Conference on Compiler Construction},
+	pages={253--267},
+	year={1996},
+	organization={Springer}
+}
+
+
+@article{whaley1999compositional,
+	title={Compositional pointer and escape analysis for Java programs},
+	author={Whaley, John and Rinard, Martin},
+	journal={ACM Sigplan Notices},
+	volume={34},
+	number={10},
+	pages={187--206},
+	year={1999},
+	publisher={ACM}
+}
+
+@inproceedings{hind1998assessing,
+	title={Assessing the effects of flow-sensitivity on pointer alias analyses},
+	author={Hind, Michael and Pioli, Anthony},
+	booktitle={International Static Analysis Symposium},
+	pages={57--81},
+	year={1998},
+	organization={Springer}
+}
+
+@inproceedings{hasti1998using,
+	title={Using static single assignment form to improve flow-insensitive pointer analysis},
+	author={Hasti, Rebecca and Horwitz, Susan},
+	booktitle={ACM SIGPLAN Notices},
+	volume={33},
+	number={5},
+	pages={97--105},
+	year={1998},
+	organization={ACM}
+}
+
+@inproceedings{hind1998assessing,
+	title={Assessing the effects of flow-sensitivity on pointer alias analyses},
+	author={Hind, Michael and Pioli, Anthony},
+	booktitle={International Static Analysis Symposium},
+	pages={57--81},
+	year={1998},
+	organization={Springer}
+}
+
+@article{livshits2003tracking,
+	title={Tracking pointers with path and context sensitivity for bug detection in C programs},
+	author={Livshits, V Benjamin and Lam, Monica S},
+	journal={ACM SIGSOFT Software Engineering Notes},
+	volume={28},
+	number={5},
+	pages={317--326},
+	year={2003},
+	publisher={ACM}
+}
+
+@inproceedings{whaley2004cloning,
+	title={Cloning-based context-sensitive pointer alias analysis using binary decision diagrams},
+	author={Whaley, John and Lam, Monica S},
+	booktitle={ACM SIGPLAN Notices},
+	volume={39},
+	number={6},
+	pages={131--144},
+	year={2004},
+	organization={ACM}
+}
+
+@inproceedings{zhu2005towards,
+	title={Towards scalable flow and context sensitive pointer analysis},
+	author={Zhu, Jianwen},
+	booktitle={Design Automation Conference, 2005. Proceedings. 42nd},
+	pages={831--836},
+	year={2005},
+	organization={IEEE}
+}
+
+@book{lhotak2006program,
+	title={Program analysis using binary decision diagrams},
+	author={Lhot{\'a}k, Ondrej},
+	volume={68},
+	number={03},
+	year={2006}
+}
+
+@inproceedings{tok2006efficient,
+	title={Efficient flow-sensitive interprocedural data-flow analysis in the presence of pointers},
+	author={Tok, Teck Bok and Guyer, Samuel Z and Lin, Calvin},
+	booktitle={International Conference on Compiler Construction},
+	pages={17--31},
+	year={2006},
+	organization={Springer}
+}
+
+@inproceedings{hardekopf2007exploiting,
+	title={Exploiting pointer and location equivalence to optimize pointer analysis},
+	author={Hardekopf, Ben and Lin, Calvin},
+	booktitle={International Static Analysis Symposium},
+	pages={265--280},
+	year={2007},
+	organization={Springer}
+}
+
+
+@inproceedings{kahlon2008bootstrapping,
+	title={Bootstrapping: a technique for scalable flow and context-sensitive pointer alias analysis},
+	author={Kahlon, Vineet},
+	booktitle={ACM SIGPLAN Notices},
+	volume={43},
+	number={6},
+	pages={249--259},
+	year={2008},
+	organization={ACM}
+}
+
+@inproceedings{hardekopf2009semi,
+	title={Semi-sparse flow-sensitive pointer analysis},
+	author={Hardekopf, Ben and Lin, Calvin},
+	booktitle={ACM SIGPLAN Notices},
+	volume={44},
+	number={1},
+	pages={226--238},
+	year={2009},
+	organization={ACM}
+}
+
+
+%%% Dillig
+@conference{dillig2008sound,
+	Author = {Dillig, I. and Dillig, T. and Aiken, A.},
+	Booktitle = {PLDI'08},
+	Date-Added = {2013-01-17 20:27:23 +1100},
+	Date-Modified = {2013-01-17 20:27:23 +1100},
+	Organization = {ACM},
+	Pages = {270--280},
+	Title = {{Sound, complete and scalable path-sensitive analysis}},
+	Year = {2008}}
+
+@article{dillig2010fluid,
+	Author = {Dillig, I. and Dillig, T. and Aiken, A.},
+	Date-Added = {2013-01-17 20:26:17 +1100},
+	Date-Modified = {2013-01-17 20:26:17 +1100},
+	Journal = {Programming Languages and Systems},
+	Pages = {246--266},
+	Publisher = {Springer},
+	Title = {Fluid updates: Beyond strong vs. weak updates},
+	Year = {2010}}
+
+
+@inproceedings{yu2010level,
+	title={Level by level: making flow-and context-sensitive pointer analysis scalable for millions of lines of code},
+	author={Yu, Hongtao and Xue, Jingling and Huo, Wei and Feng, Xiaobing and Zhang, Zhaoqing},
+	booktitle={Proceedings of the 8th annual IEEE/ACM international symposium on Code generation and optimization},
+	pages={218--229},
+	year={2010},
+	organization={ACM}
+}
+
+@inproceedings{hardekopf2011flow,
+	title={Flow-sensitive pointer analysis for millions of lines of code},
+	author={Hardekopf, Ben and Lin, Calvin},
+	booktitle={Proceedings of the 9th Annual IEEE/ACM International Symposium on Code Generation and Optimization},
+	pages={289--298},
+	year={2011},
+	organization={IEEE Computer Society}
+}
+
+@inproceedings{lhotak2011points,
+	title={Points-to analysis with efficient strong updates},
+	author={Lhot{\'a}k, Ondrej and Chung, Kwok-Chiang Andrew},
+	booktitle={ACM SIGPLAN Notices},
+	volume={46},
+	number={1},
+	pages={3--16},
+	year={2011},
+	organization={ACM}
+}
+
+@inproceedings{sui2011spas,
+	title={SPAS: scalable path-sensitive pointer analysis on full-sparse SSA},
+	author={Sui, Yulei and Ye, Sen and Xue, Jingling and Yew, Pen-Chung},
+	booktitle={Asian Symposium on Programming Languages and Systems},
+	pages={155--171},
+	year={2011},
+	organization={Springer}
+}
+
+@inproceedings{yan2011demand,
+	title={Demand-driven context-sensitive alias analysis for Java},
+	author={Yan, Dacong and Xu, Guoqing and Rountev, Atanas},
+	booktitle={Proceedings of the 2011 International Symposium on Software Testing and Analysis},
+	pages={155--165},
+	year={2011},
+	organization={ACM}
+}
+
+%% Introspective analysis
+@inproceedings{smaragdakis2014introspective,
+	title={Introspective analysis: context-sensitivity, across the board},
+	author={Smaragdakis, Yannis and Kastrinis, George and Balatsouras, George},
+	booktitle={ACM SIGPLAN Notices},
+	volume={49},
+	number={6},
+	pages={485--495},
+	year={2014},
+	organization={ACM}
+}
+
+@inproceedings{sui2016sparse,
+	title={Sparse flow-sensitive pointer analysis for multithreaded programs},
+	author={Sui, Yulei and Di, Peng and Xue, Jingling},
+	booktitle={Proceedings of the 2016 International Symposium on Code Generation and Optimization},
+	pages={160--170},
+	year={2016},
+	organization={ACM}
+}
+
+
+
+@article{jeong2017data,
+	title={Data-driven context-sensitivity for points-to analysis},
+	author={Jeong, Sehun and Jeon, Minseok and Cha, Sungdeok and Oh, Hakjoo},
+	journal={Proceedings of the ACM on Programming Languages},
+	volume={1},
+	number={OOPSLA},
+	pages={100},
+	year={2017},
+	publisher={ACM}
+}
+
+@inproceedings{li2011boosting,
+	title={Boosting the performance of flow-sensitive points-to analysis using value flow},
+	author={Li, Lian and Cifuentes, Cristina and Keynes, Nathan},
+	booktitle={Proceedings of the 19th ACM SIGSOFT symposium and the 13th European conference on Foundations of software engineering},
+	pages={343--353},
+	year={2011},
+	organization={ACM}
+}
+
+@inproceedings{kastrinis2013hybrid,
+	title={Hybrid context-sensitivity for points-to analysis},
+	author={Kastrinis, George and Smaragdakis, Yannis},
+	booktitle={ACM SIGPLAN Notices},
+	volume={48},
+	number={6},
+	pages={423--434},
+	year={2013},
+	organization={ACM}
+}
+
+@inproceedings{wei2015adaptive,
+	title={Adaptive context-sensitive analysis for JavaScript},
+	author={Wei, Shiyi and Ryder, Barbara G},
+	booktitle={LIPIcs-Leibniz International Proceedings in Informatics},
+	volume={37},
+	year={2015},
+	organization={Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik}
+}
+
+@article{tan2017efficient,
+	title={Efficient and precise points-to analysis: modeling the heap by merging equivalent automata},
+	author={Tan, Tian and Li, Yue and Xue, Jingling},
+	journal={ACM SIGPLAN Notices},
+	volume={52},
+	number={6},
+	pages={278--291},
+	year={2017},
+	publisher={ACM}
+}
+
+@article{li2018scalability,
+	title={Scalability-First Pointer Analysis with Self-Tuning Context-Sensitivity},
+	author={Li, Yue and Tan, Tian and M{\o}ller, Anders and Smaragdakis, Yannis},
+	year={2018}
+}
+
+
+
+
+%%%%%%%%%%%%%%%
+%%
+%% Demand-driven and Client-driven analysis
+%%
+%%%%%%%%%%%%%%%
+
+@inproceedings{heintze2001demand,
+	title={Demand-driven pointer analysis},
+	author={Heintze, Nevin and Tardieu, Olivier},
+	booktitle={ACM SIGPLAN Notices},
+	volume={36},
+	number={5},
+	pages={24--34},
+	year={2001},
+	organization={ACM}
+}
+
+@inproceedings{saha2005incremental,
+	title={Incremental and demand-driven points-to analysis using logic programming},
+	author={Saha, Diptikalyan and Ramakrishnan, CR},
+	booktitle={Proceedings of the 7th ACM SIGPLAN international conference on Principles and practice of declarative programming},
+	pages={117--128},
+	year={2005},
+	organization={ACM}
+}
+
+@inproceedings{sridharan2006refinement,
+	title={Refinement-based context-sensitive points-to analysis for Java},
+	author={Sridharan, Manu and Bod{\'\i}k, Rastislav},
+	booktitle={ACM SIGPLAN Notices},
+	volume={41},
+	number={6},
+	pages={387--400},
+	year={2006},
+	organization={ACM}
+}
+
+@article{zheng2008demand,
+	title={Demand-driven alias analysis for C},
+	author={Zheng, Xin and Rugina, Radu},
+	journal={ACM SIGPLAN Notices},
+	volume={43},
+	number={1},
+	pages={197--208},
+	year={2008},
+	publisher={ACM}
+}
+
+@inproceedings{liang2011scaling,
+	title={Scaling abstraction refinement via pruning},
+	author={Liang, Percy and Naik, Mayur},
+	booktitle={ACM SIGPLAN Notices},
+	volume={46},
+	number={6},
+	pages={590--601},
+	year={2011},
+	organization={ACM}
+}
+
+@inproceedings{shang2012demand,
+	title={On-demand dynamic summary-based points-to analysis},
+	author={Shang, Lei and Xie, Xinwei and Xue, Jingling},
+	booktitle={Proceedings of the Tenth International Symposium on Code Generation and Optimization},
+	pages={264--274},
+	year={2012},
+	organization={ACM}
+}
+
+@inproceedings{zhang2014efficient,
+	title={Efficient subcubic alias analysis for C},
+	author={Zhang, Qirun and Xiao, Xiao and Zhang, Charles and Yuan, Hao and Su, Zhendong},
+	booktitle={ACM SIGPLAN Notices},
+	volume={49},
+	number={10},
+	pages={829--845},
+	year={2014},
+	organization={ACM}
+}
+
+@inproceedings{yan2011demand,
+	title={Demand-driven context-sensitive alias analysis for Java},
+	author={Yan, Dacong and Xu, Guoqing and Rountev, Atanas},
+	booktitle={Proceedings of the 2011 International Symposium on Software Testing and Analysis},
+	pages={155--165},
+	year={2011},
+	organization={ACM}
+}
+
+@inproceedings{spath2016boomerang,
+	title={Boomerang: Demand-driven flow-and context-sensitive pointer analysis for java},
+	author={Sp{\"a}th, Johannes and Nguyen Quang Do, Lisa and Ali, Karim and Bodden, Eric},
+	booktitle={LIPIcs-Leibniz International Proceedings in Informatics},
+	volume={56},
+	year={2016},
+	organization={Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik}
+}
+
+
+@inproceedings{sui2016demand,
+	title={On-demand strong update analysis via value-flow refinement},
+	author={Sui, Yulei and Xue, Jingling},
+	booktitle={Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	pages={460--473},
+	year={2016},
+	organization={ACM}
+}
+
+
+%%%%%%%%%%%%%%%
+%%
+%% Call graph construction
+%%
+%%%%%%%%%%%%%%%
+
+@article{landi1992undecidability,
+	title={Undecidability of static analysis},
+	author={Landi, William},
+	journal={ACM Letters on Programming Languages and Systems (LOPLAS)},
+	volume={1},
+	number={4},
+	pages={323--337},
+	year={1992},
+	publisher={ACM}
+}
+
+@inproceedings{mock2002improving,
+	title={Improving program slicing with dynamic points-to data},
+	author={Mock, Markus and Atkinson, Darren C and Chambers, Craig and Eggers, Susan J},
+	booktitle={Proceedings of the 10th ACM SIGSOFT symposium on Foundations of software engineering},
+	pages={71--80},
+	year={2002},
+	organization={ACM}
+}
+
+@article{murphy1998empirical,
+	title={An empirical study of static call graph extractors},
+	author={Murphy, Gail C and Notkin, David and Griswold, William G and Lan, Erica S},
+	journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
+	volume={7},
+	number={2},
+	pages={158--191},
+	year={1998},
+	publisher={ACM}
+}
+
+
+
+@article{milanova2004precise,
+	title={Precise call graphs for C programs with function pointers},
+	author={Milanova, Ana and Rountev, Atanas and Ryder, Barbara G},
+	journal={Automated Software Engineering},
+	volume={11},
+	number={1},
+	pages={7--26},
+	year={2004},
+	publisher={Springer}
+}
+
+@inproceedings{lhotak2007comparing,
+	title={Comparing call graphs},
+	author={Lhot{\'a}k, Ond and others},
+	booktitle={Proceedings of the 7th ACM SIGPLAN-SIGSOFT workshop on Program analysis for software tools and engineering},
+	pages={37--42},
+	year={2007},
+	organization={ACM}
+}
+
+@article{bacon1996fast,
+	title={Fast static analysis of C++ virtual function calls},
+	author={Bacon, David F and Sweeney, Peter F},
+	journal={ACM Sigplan Notices},
+	volume={31},
+	number={10},
+	pages={324--341},
+	year={1996},
+	publisher={ACM}
+}
+
+%% Class Hierarchy analysis (CHA)
+@inproceedings{dean1995optimization,
+	title={Optimization of object-oriented programs using static class hierarchy analysis},
+	author={Dean, Jeffrey and Grove, David and Chambers, Craig},
+	booktitle={European Conference on Object-Oriented Programming},
+	pages={77--101},
+	year={1995},
+	organization={Springer}
+}
+
+@inproceedings{milanova2002precise,
+	title={Precise call graph construction in the presence of function pointers},
+	author={Milanova, Ana and Rountev, Atanas and Ryder, Barbara G},
+	booktitle={Source Code Analysis and Manipulation, 2002. Proceedings. Second IEEE International Workshop on},
+	pages={155--162},
+	year={2002},
+	organization={IEEE}
+}
+
+
+@article{milanova2004precise,
+	title={Precise call graphs for C programs with function pointers},
+	author={Milanova, Ana and Rountev, Atanas and Ryder, Barbara G},
+	journal={Automated Software Engineering},
+	volume={11},
+	number={1},
+	pages={7--26},
+	year={2004},
+	publisher={Springer}
+}
+
+@inproceedings{antoniol1999impact,
+	title={Impact of function pointers on the call graph},
+	author={Antoniol, Giuliano and Calzolari, F and Tonella, Paolo},
+	booktitle={Software Maintenance and Reengineering, 1999. Proceedings of the Third European Conference on},
+	pages={51--59},
+	year={1999},
+	organization={IEEE}
+}
+
+@inproceedings{atkinson2004accurate,
+	title={Accurate call graph extraction of programs with function pointers using type signatures},
+	author={Atkinson, Darren C},
+	booktitle={Software Engineering Conference, 2004. 11th Asia-Pacific},
+	pages={326--335},
+	year={2004},
+	organization={IEEE}
+}
+
+@inproceedings{cheng1999empirical,
+	title={An empirical study of function pointers using spec benchmarks},
+	author={Cheng, Ben-Chung and Wen-mei, W Hwu},
+	booktitle={International Workshop on Languages and Compilers for Parallel Computing},
+	pages={490--493},
+	year={1999},
+	organization={Springer}
+}
+
+@inproceedings{atkinson2004accurate,
+	title={Accurate call graph extraction of programs with function pointers using type signatures},
+	author={Atkinson, Darren C},
+	booktitle={Software Engineering Conference, 2004. 11th Asia-Pacific},
+	pages={326--335},
+	year={2004},
+	organization={IEEE}
+}
+
+
+@inproceedings{ali2012application,
+	title={Application-only call graph construction},
+	author={Ali, Karim and Lhot{\'a}k, Ond{\v{r}}ej},
+	booktitle={European Conference on Object-Oriented Programming},
+	pages={688--712},
+	year={2012},
+	organization={Springer}
+}
+
+
+@inproceedings{ali2013averroes,
+	title={Averroes: Whole-program analysis without the whole program},
+	author={Ali, Karim and Lhot{\'a}k, Ond{\v{r}}ej},
+	booktitle={European Conference on Object-Oriented Programming},
+	pages={378--400},
+	year={2013},
+	organization={Springer}
+}
+
+
+%%%%%%%%%%%%%%%%
+%%
+%% Other Applications
+%%
+%%%%%%%%%%%%%%%
+
+%%% Taint
+@inproceedings{tripp2013andromeda,
+	title={Andromeda: Accurate and scalable security analysis of web applications},
+	author={Tripp, Omer and Pistoia, Marco and Cousot, Patrick and Cousot, Radhia and Guarnieri, Salvatore},
+	booktitle={International Conference on Fundamental Approaches to Software Engineering},
+	pages={210--225},
+	year={2013},
+	organization={Springer}
+}
+
+
+%%% Typestate
+@article{alur2005synthesis,
+	title={Synthesis of interface specifications for Java classes},
+	author={Alur, Rajeev and {\v{C}}ern{\`y}, Pavol and Madhusudan, Parthasarathy and Nam, Wonhong},
+	journal={ACM SIGPLAN Notices},
+	volume={40},
+	number={1},
+	pages={98--109},
+	year={2005},
+	publisher={ACM}
+}
+
+@inproceedings{naeem2008typestate,
+	title={Typestate-like analysis of multiple interacting objects},
+	author={Naeem, Nomair A and Lhotak, Ondrej},
+	booktitle={ACM Sigplan Notices},
+	volume={43},
+	number={10},
+	pages={347--366},
+	year={2008},
+	organization={ACM}
+}
+
+@article{fink2008effective,
+	title={Effective typestate verification in the presence of aliasing},
+	author={Fink, Stephen J and Yahav, Eran and Dor, Nurit and Ramalingam, G and Geay, Emmanuel},
+	journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
+	volume={17},
+	number={2},
+	pages={9},
+	year={2008},
+	publisher={ACM}
+}
+
+
+
+% change-impact analysis
+@inproceedings{acharya2011practical,
+	title={Practical change impact analysis based on static program slicing for industrial software systems},
+	author={Acharya, Mithun and Robinson, Brian},
+	booktitle={Proceedings of the 33rd International Conference on Software Engineering},
+	pages={746--755},
+	year={2011},
+	organization={ACM}
+}
+
+@inproceedings{ye2014accelerating,
+	title={Accelerating dynamic detection of uses of undefined values with static value-flow analysis},
+	author={Ye, Ding and Sui, Yulei and Xue, Jingling},
+	booktitle={Proceedings of Annual IEEE/ACM International Symposium on Code Generation and Optimization},
+	pages={154},
+	year={2014},
+	organization={ACM}
+}
+
+%% Memory leak
+@inproceedings{sui2012static,
+	title={Static memory leak detection using full-sparse value-flow analysis},
+	author={Sui, Yulei and Ye, Ding and Xue, Jingling},
+	booktitle={Proceedings of the 2012 International Symposium on Software Testing and Analysis},
+	pages={254--264},
+	year={2012},
+	organization={ACM}
+}
+@inproceedings{shi2018pinpoint,
+	title={Pinpoint: fast and precise sparse value flow analysis for million lines of code},
+	author={Shi, Qingkai and Xiao, Xiao and Wu, Rongxin and Zhou, Jinguo and Fan, Gang and Zhang, Charles},
+	booktitle={Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+	pages={693--706},
+	year={2018},
+	organization={ACM}
+}
+
+@inproceedings{oh2012design,
+	title={Design and implementation of sparse global analyses for C-like languages},
+	author={Oh, Hakjoo and Heo, Kihong and Lee, Wonchan and Lee, Woosuk and Yi, Kwangkeun},
+	booktitle={ACM SIGPLAN Notices},
+	volume={47},
+	number={6},
+	pages={229--238},
+	year={2012},
+	organization={ACM}
+}
+
+@inproceedings{ball2002s,
+	title={The S LAM project: debugging system software via static analysis},
+	author={Ball, Thomas and Rajamani, Sriram K},
+	booktitle={ACM SIGPLAN Notices},
+	volume={37},
+	number={1},
+	pages={1--3},
+	year={2002},
+	organization={ACM}
+}
+
+
+@incollection{blanchet2002design,
+	title={Design and implementation of a special-purpose static program analyzer for safety-critical real-time embedded software},
+	author={Blanchet, Bruno and Cousot, Patrick and Cousot, Radhia and Feret, J{\'e}r{\^o}me and Mauborgne, Laurent and Min{\'e}, Antoine and Monniaux, David and Rival, Xavier},
+	booktitle={The essence of computation},
+	pages={85--108},
+	year={2002},
+	publisher={Springer}
+}
+
+%%Thin slicing
+@article{sridharan2007thin,
+	title={Thin slicing},
+	author={Sridharan, Manu and Fink, Stephen J and Bodik, Rastislav},
+	journal={ACM SIGPLAN Notices},
+	volume={42},
+	number={6},
+	pages={112--122},
+	year={2007},
+	publisher={ACM}
+}
+
+
+%%%%%%%%%%%%%%
+%%
+%% Alias set analysis
+%%
+%%%%%%%%%%%%%%%
+@inproceedings{naeem2009efficient,
+	title={Efficient alias set analysis using SSA form},
+	author={Naeem, Nomair A and Lhot{\'a}k, Ondrej},
+	booktitle={Proceedings of the 2009 international symposium on Memory management},
+	pages={79--88},
+	year={2009},
+	organization={ACM}
+}
+
+@inproceedings{naeem2011faster,
+	title={Faster alias set analysis using summaries},
+	author={Naeem, Nomair A and Lhot{\'a}k, Ond{\v{r}}ej},
+	booktitle={International Conference on Compiler Construction},
+	pages={82--103},
+	year={2011},
+	organization={Springer}
+}
+
+@inproceedings{spath2016boomerang,
+	title={Boomerang: Demand-driven flow-and context-sensitive pointer analysis for java},
+	author={Sp{\"a}th, Johannes and Nguyen Quang Do, Lisa and Ali, Karim and Bodden, Eric},
+	booktitle={LIPIcs-Leibniz International Proceedings in Informatics},
+	volume={56},
+	year={2016},
+	organization={Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik}
+}
+
+@inproceedings{unkel2008automatic,
+	title={Automatic inference of stationary fields: a generalization of java's final fields},
+	author={Unkel, Christopher and Lam, Monica S},
+	booktitle={ACM SIGPLAN Notices},
+	volume={43},
+	number={1},
+	pages={183--195},
+	year={2008},
+	organization={ACM}
+}
+
+@inproceedings{feldthaus2013efficient,
+	title={Efficient construction of approximate call graphs for JavaScript IDE services},
+	author={Feldthaus, Asger and Sch{\"a}fer, Max and Sridharan, Manu and Dolby, Julian and Tip, Frank},
+	booktitle={Software Engineering (ICSE), 2013 35th International Conference on},
+	pages={752--761},
+	year={2013},
+	organization={IEEE}
+}
+
+@article{livshits2015defense,
+	title={In defense of soundiness: a manifesto},
+	author={Livshits, Benjamin and Sridharan, Manu and Smaragdakis, Yannis and Lhot{\'a}k, Ond{\v{r}}ej and Amaral, J Nelson and Chang, Bor-Yuh Evan and Guyer, Samuel Z and Khedker, Uday P and M{\o}ller, Anders and Vardoulakis, Dimitrios},
+	journal={Communications of the ACM},
+	volume={58},
+	number={2},
+	pages={44--46},
+	year={2015},
+	publisher={ACM}
+}
+
+@inproceedings{avots2005improving,
+	title={Improving software security with a C pointer analysis},
+	author={Avots, Dzintars and Dalton, Michael and Livshits, V Benjamin and Lam, Monica S},
+	booktitle={Proceedings of the 27th international conference on Software engineering},
+	pages={332--341},
+	year={2005},
+	organization={ACM}
+}
+
+@inproceedings{hind2000pointer,
+	title={Which pointer analysis should I use?},
+	author={Hind, Michael and Pioli, Anthony},
+	booktitle={ACM SIGSOFT Software Engineering Notes},
+	volume={25},
+	number={5},
+	pages={113--123},
+	year={2000},
+	organization={ACM}
+}
+
+
+%%%%%%%%%%%%%%%%
+%%
+%%  Static + Dynamic
+%%
+%%%%%%%%%%%%%%%%%%%
+
+%%Dynamic class loading
+@inproceedings{hirzel2004pointer,
+	title={Pointer analysis in the presence of dynamic class loading},
+	author={Hirzel, Martin and Diwan, Amer and Hind, Michael},
+	booktitle={European Conference on Object-Oriented Programming},
+	pages={96--122},
+	year={2004},
+	organization={Springer}
+}
+
+@inproceedings{bodden2011taming,
+	title={Taming reflection: Aiding static analysis in the presence of reflection and custom class loaders},
+	author={Bodden, Eric and Sewe, Andreas and Sinschek, Jan and Oueslati, Hela and Mezini, Mira},
+	booktitle={Proceedings of the 33rd International Conference on Software Engineering},
+	pages={241--250},
+	year={2011},
+	organization={ACM}
+}
+
+@article{grech2017heaps,
+	title={Heaps don't lie: countering unsoundness with heap snapshots},
+	author={Grech, Neville and Fourtounis, George and Francalanza, Adrian and Smaragdakis, Yannis},
+	journal={Proceedings of the ACM on Programming Languages},
+	volume={1},
+	number={OOPSLA},
+	pages={68},
+	year={2017},
+	publisher={ACM}
+}
+
+@inproceedings{grech2018shooting,
+	title={Shooting from the heap: Ultra-scalable static analysis with heap snapshots},
+	author={Grech, Neville and Fourtounis, George and Francalanza, Adrian and Smaragdakis, Yannis},
+	booktitle={Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+	pages={198--208},
+	year={2018},
+	organization={ACM}
+}
+
+@inproceedings{li2017dynamic,
+	title={Dynamic symbolic execution for polymorphism},
+	author={Li, Lian and Lu, Yi and Xue, Jingling},
+	booktitle={Proceedings of the 26th International Conference on Compiler Construction},
+	pages={120--130},
+	year={2017},
+	organization={ACM}
+}
+
+
+
+%%%%%%%%%%%%%%%%
+%%
+%%  Pointer disambiguate
+%%
+%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{bodik2000abcd,
+	title={ABCD: eliminating array bounds checks on demand},
+	author={Bod{\'\i}k, Rastislav and Gupta, Rajiv and Sarkar, Vivek},
+	booktitle={ACM SIGPLAN Notices},
+	volume={35},
+	number={5},
+	pages={321--333},
+	year={2000},
+	organization={ACM}
+}
+
+@inproceedings{rugina2000symbolic,
+	title={Symbolic bounds analysis of pointers, array indices, and accessed memory regions},
+	author={Rugina, Radu and Rinard, Martin},
+	booktitle={ACM Sigplan Notices},
+	volume={35},
+	number={5},
+	pages={182--195},
+	year={2000},
+	organization={ACM}
+}
+
+@article{rus2003hybrid,
+	title={Hybrid analysis: static \& dynamic memory reference analysis},
+	author={Rus, Silvius and Rauchwerger, Lawrence and Hoeflinger, Jay},
+	journal={International Journal of Parallel Programming},
+	volume={31},
+	number={4},
+	pages={251--283},
+	year={2003},
+	publisher={Springer}
+}
+
+@inproceedings{nazare2014validation,
+	title={Validation of memory accesses through symbolic analyses},
+	author={Nazar{\'e}, Henrique and Maffra, Izabela and Santos, Willer and Barbosa, Leonardo and Gonnord, Laure and Quint{\~a}o Pereira, Fernando Magno},
+	booktitle={ACM SIGPLAN Notices},
+	volume={49},
+	number={10},
+	pages={791--809},
+	year={2014},
+	organization={ACM}
+}
+
+@inproceedings{alves2015runtime,
+	title={Runtime pointer disambiguation},
+	author={Alves, P{\'e}ricles and Gruber, Fabian and Doerfert, Johannes and Lamprineas, Alexandros and Grosser, Tobias and Rastello, Fabrice and Pereira, Fernando Magno Quint{\~a}o},
+	booktitle={ACM SIGPLAN Notices},
+	volume={50},
+	number={10},
+	pages={589--606},
+	year={2015},
+	organization={ACM}
+}
+
+@inproceedings{sui2016loop,
+	title={Loop-oriented array-and field-sensitive pointer analysis for automatic SIMD vectorization},
+	author={Sui, Yulei and Fan, XIaokang and Zhou, Hao and Xue, Jingling},
+	booktitle={ACM SIGPLAN Notices},
+	volume={51},
+	number={5},
+	pages={41--51},
+	year={2016},
+	organization={ACM}
+}
+
+@inproceedings{paisante2016symbolic,
+	title={Symbolic range analysis of pointers},
+	author={Paisante, Vitor and Maalej, Maroua and Barbosa, Leonardo and Gonnord, Laure and Pereira, Fernando Magno Quint{\~a}o},
+	booktitle={Code Generation and Optimization (CGO), 2016 IEEE/ACM International Symposium on},
+	pages={171--181},
+	year={2016},
+	organization={IEEE}
+}
+
+
+%%%%%%%%%%%%%%%
+%%
+%%  Different SSAs
+%%
+%%%%%%%%%%%%%%%
+
+@inproceedings{cytron1989efficient,
+	title={An efficient method of computing static single assignment form},
+	author={Cytron, Ron and Ferrante, Jeanne and Rosen, Barry K and Wegman, Mark N and Zadeck, F Kenneth},
+	booktitle={Proceedings of the 16th ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+	pages={25--35},
+	year={1989},
+	organization={ACM}
+}
+
+% Sparse evaluation graph
+@inproceedings{choi1991automatic,
+	title={Automatic construction of sparse data flow evaluation graphs},
+	author={Choi, Jong-Deok and Cytron, Ron and Ferrante, Jeanne},
+	booktitle={Proceedings of the 18th ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+	pages={55--66},
+	year={1991},
+	organization={ACM}
+}
+
+@inproceedings{chow1996effective,
+	title={Effective representation of aliases and indirect memory operations in SSA form},
+	author={Chow, Fred and Chan, Sun and Liu, Shin-Ming and Lo, Raymond and Streich, Mark},
+	booktitle={International Conference on Compiler Construction},
+	pages={253--267},
+	year={1996},
+	organization={Springer}
+}
+
+%% partial SSA
+@inproceedings{lattner2004llvm,
+	title={LLVM: A compilation framework for lifelong program analysis \& transformation},
+	author={Lattner, Chris and Adve, Vikram},
+	booktitle={Proceedings of the international symposium on Code generation and optimization: feedback-directed and runtime optimization},
+	pages={75},
+	year={2004},
+	organization={IEEE Computer Society}
+}
+
+
+
