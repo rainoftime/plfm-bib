@@ -4,6 +4,9 @@ BibTeX bibliography files about PL and FM.
 - SAT and SMT solving: `sat-smt.bib`
 - Equivalence check/proof: `equivalenche check.bib` (including invariant inference)
 - Pointer analysis: `alias.bib`
+- Quantifier elimination: `qe.bib`
+- Binary analysis: `binary.bib`
+
 
 Related repos:
 
